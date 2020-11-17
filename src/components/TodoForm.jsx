@@ -1,13 +1,16 @@
-import React from 'react'
-function TodoForm() {
+import React, { useState } from 'react'
+function TodoForm(props) {
+	const [valueInput, setValueInput] = useState('')
 	const handleSubmit = e => {
+		//on stoppe le rechargement
 		e.preventDefault()
-		console.log(e.value)
+		//on add la valeur contenue dans la var valueInput
+		props.updateTodos([...props.listeTodos, { text: valueInput }])
 	}
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<input type='text' />
+			<input type='text' onChange={e => setValueInput(e.target.value)} />
 			<input type='submit' />
 		</form>
 	)

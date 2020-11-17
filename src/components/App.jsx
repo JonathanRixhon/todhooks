@@ -6,6 +6,16 @@ import todoData from './todoData'
 
 function App() {
 	const [todos, setTodos] = useState([...todoData])
+	/* const [todos, setTodos] = useState([
+		{
+			text: 'manger des fruits et des légumes',
+			isCompleted: false,
+		},
+		{
+			text: 'Se laver',
+			isCompleted: false,
+		},
+	]) */
 	return (
 		<Fragment>
 			<h1 aria-level='2' role='heading'>
@@ -15,12 +25,12 @@ function App() {
 				<h2 aria-level='2' role='heading'>
 					Ma liste
 				</h2>
-				<TodoForm />
 				<ul>
 					{todos.map((todo, index) => (
 						<Todo key={index} text={todo.text} index={todo.index} />
 					))}
 				</ul>
+				<TodoForm listeTodos={todos} updateTodos={setTodos} />
 			</section>
 		</Fragment>
 	)
