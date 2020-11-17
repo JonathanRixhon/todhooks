@@ -6,6 +6,7 @@ function TodoForm(props) {
 		e.preventDefault()
 		//on add la valeur contenue dans la var valueInput
 		props.updateTodos([...props.listeTodos, { text: valueInput }])
+		setValueInput('')
 	}
 
 	return (

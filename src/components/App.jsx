@@ -6,16 +6,7 @@ import todoData from './todoData'
 
 function App() {
 	const [todos, setTodos] = useState([...todoData])
-	/* const [todos, setTodos] = useState([
-		{
-			text: 'manger des fruits et des légumes',
-			isCompleted: false,
-		},
-		{
-			text: 'Se laver',
-			isCompleted: false,
-		},
-	]) */
+
 	return (
 		<Fragment>
 			<h1 aria-level='2' role='heading'>
