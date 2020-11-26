@@ -5,7 +5,7 @@ const todoData = [
 	},
 	{
 		text: 'Se laver',
-		isCompleted: false,
+		isCompleted: true,
 	},
 ]
 export default todoData
